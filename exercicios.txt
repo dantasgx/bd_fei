@@ -1,0 +1,60 @@
+1. Liste todos os artistas com seus respectivos IDs e nomes.
+select * from artist
+algebra relacional: artist
+
+2. Quantos gêneros estão cadastrados no banco de dados?
+select * from genre
+algebra relacional: genre
+25 gêneros
+
+3. Mostre o nome e o email de todos os clientes.
+select first_name, last_name, email from customer
+algebra relacional: π first_name, last_name, email (customer)
+
+4. Quais são os nomes de todas as mídias (media types) disponíveis?
+select * from media_type
+algebra relacional: media_type
+MPEG audio file, Protected AAC audio file, Protected MPEG-4 video file, Purchased AAC audio file, AAC audio file
+
+5. Liste todos os álbuns com o título e o ID do artista.
+select artist_id, title from album
+algebra relacional: π artist_id, title (album)
+
+6. Quantos funcionários trabalham na empresa?
+select count(*) from employee
+algebra relacional: π count(employee)
+
+7. Mostre o nome de todas as playlists.
+select name from playlist
+algebra relacional: π name(playlist)
+
+8. Qual é o preço unitário da faixa (track) com ID 10?
+select unit_price from track
+where track_id = 10;
+algebra relacional: π unit_price (σ track_id = 10 (track))
+
+9. Liste todos os países dos clientes sem duplicatas.
+SELECT DISTINCT country from customer
+algebra relacional: π country (customer)
+
+10. Quantas faturas (invoices) existem no banco de dados?
+select count(*) from invoice
+algebra relacional: invoice
+412 faturas
+
+11. Quais são os nomes dos clientes que moram no Brasil?
+select first_name, last_name from customer
+where country = 'Brazil'
+algebra relacional: π fist_name, last_name (σ country = 'Brazil'(customer))
+
+12. Liste as faixas que custam mais de R$ 1,00.
+select * from track
+where unit_price > 1
+algebra relacional: σ unit_price > 1 (track)
+
+13. Mostre todos os clientes cuja data de contratação foi em 2022.
+
+
+
+
+
